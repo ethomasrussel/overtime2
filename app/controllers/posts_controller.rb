@@ -3,6 +3,8 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show]
 
   def index
+    @posts = Post.all
+    #@post = Post.post_by(current_user).page(params[:page]).per(10)
   end
 
   def new
